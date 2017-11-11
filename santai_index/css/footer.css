@@ -1,0 +1,92 @@
+.footer{
+	background: #2b2a28;
+	color: #fff;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.footer ul,.footer li{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.footer ul{
+	overflow: hidden;
+}
+.footer ul li{
+	width: 50%;
+	line-height: 25px;
+	float: left;
+	font-size: 12px;
+	color: #E5E5E5;
+}
+.footer ul li a{
+	text-decoration: none;
+	color: #E5E5E5;
+}
+.footer ul li a:hover{
+	color: #4875D2;
+	text-decoration: underline;
+}
+.contact_us ul li{
+	float: none;
+}
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+	.container{
+		position: relative;
+	}
+	.brand{
+		position: absolute;
+		left: 15px;
+		top: 80px;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+	.container{
+		position: relative;
+	}
+	.brand{
+		position: absolute;
+		left: 15px;
+		top: 80px;
+	}
+}
+@media only screen and (max-width: 768px) {
+	.container{
+		position: relative;
+	}
+	.brand{
+		position: absolute;
+		left: 15px;
+		top: 80px;
+	}
+	.footer a{
+		font-size: 11px;
+	}
+	.contact_us ul{
+		overflow: hidden;
+	}
+	.contact_us ul li:nth-child(3){
+		float: right;
+		margin-top: -100px;
+	}
+}
+@media only screen and (max-width:400px ) {
+	
+	.product_link ul li{
+		float: none;
+	}
+	.industry{
+		width: 50%;
+		margin-top: -120px;
+	}
+	.contact_us ul{
+		overflow: hidden;
+	}
+	.contact_us ul li:nth-child(3){
+		float: right;
+		margin-top: -100px;
+	}
+	.h3,h3{
+		font-size: 20px;
+	}
+}
