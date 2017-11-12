@@ -8,6 +8,7 @@
 .swiper-slide img{
 	max-width: 100%;
 	width: 100%;
+	min-height: 250px;
 }
 .swiper-pagination-bullet {
   width: 1.2rem !important;

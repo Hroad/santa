@@ -10,30 +10,40 @@ function searchToggle(obj, evt){
 			  container.removeClass('active');
 			  // clear input
 			  container.find('.search-input').val('');
-			  // clear and hide result container when we press close
-			  container.find('.result-container').fadeOut(100, function(){$(this).empty();});
+			 
 		}
 	}
 
-	function submitFn(obj, evt){
-		value = $(obj).find('.search-input').val().trim();
-
-		_html = "Yup yup! Your search text sounds like this: ";
-		if(!value.length){
-			_html = "Yup yup! Add some text friend :D";
-		}
-		else{
-			_html += "<b>" + value + "</b>";
-		}
-
-		$(obj).find('.result-container').html('<span>' + _html + '</span>');
-		$(obj).find('.result-container').fadeIn(100);
-
-		evt.preventDefault();
-	}
+	
+	
 //	search        END
 
 $(function(){
+	
+	$(".search-input").focus(function(){
+		$(this).val('');
+	});
+//	search>768    END    
+	
+
+	var i=0;
+	$(".search_xs").click(function(){
+		i++;
+		var b=i%2;
+		if(b==1){
+			$(".input_xs").animate({"left":"0"},500);
+			$(".input_xs").css("display","block");
+		}
+		else{
+			$(".input_xs").animate({"left":"75%"},500);
+			$(".input_xs").css("display","none");
+			$(".input_xs").val('');
+		}
+	});
+//	search<768     END
+
+//	search     END
+	
 	var mySwiper = new Swiper ('.swiper-container', {
 		    loop: true,
 		    autoplay : 3000,
@@ -55,7 +65,19 @@ $(function(){
 			$("section").toggleClass("model-6");
 			$(".nav-menu").slideToggle(1000);
 		});
-//		NAV     END
+//		NAV_xs     END
 
+		$(".nav ul li").hover(
+			function(){
+				$(this).find(".subnav").slideDown();
+			},
+			function(){
+				$(this).find(".subnav").slideUp();
+			}
+		);
+//		subnav    END
 
+		
+		
+		
 })
