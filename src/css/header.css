@@ -68,7 +68,7 @@
 	text-align: center;
 	height: 55px;
 }
-.nav_bar .nav ul .nav_last{
+.nav_bar .nav ul .nav_last a{
 	border: none;
 }
 .nav_bar .nav ul li a:hover{
