@@ -1,4 +1,4 @@
-
+﻿
 function searchToggle(obj, evt){
 		var container = $(obj).closest('.search-wrapper');
 
@@ -67,17 +67,30 @@ $(function(){
 		});
 //		NAV_xs     END
 
-		$(".nav ul li").hover(
+		$(".nav ul .nav_h").hover(
 			function(){
-				$(this).find(".subnav").slideDown();
+				$(".subnav").css("display","block");
+				$(".nav_bar").addClass("nav_bar_h");
 			},
 			function(){
-				$(this).find(".subnav").slideUp();
+				$(".subnav").css("display","none");
+				$(".nav_bar").removeClass("nav_bar_h");
 			}
 		);
 //		subnav    END
 
-		
+
+		var a=true;
+		$(".pic").click(function(){
+			if(a==true){
+				$(".service_an").animate({left:"0px"},500);
+				a=false;
+			}else{
+				$(".service_an").animate({left:"-173px"},500);
+				a=true;	
+			}
+		});
+//		客服               END		
 		
 		
 });
