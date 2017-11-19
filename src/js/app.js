@@ -10,8 +10,24 @@ function searchToggle(obj, evt){
 			  container.removeClass('active');
 			  // clear input
 			  container.find('.search-input').val('');
-			 
+			
 		}
+	}
+	function submitFn(obj, evt){
+		value = $(obj).find('.search-input').val().trim();
+
+		_html = "Yup yup! Your search text sounds like this: ";
+		if(!value.length){
+			_html = "Yup yup! Add some text friend :D";
+		}
+		else{
+			_html += "<b>" + value + "</b>";
+		}
+
+		$(obj).find('.result-container').html('<span>' + _html + '</span>');
+		$(obj).find('.result-container').fadeIn(100);
+
+		evt.preventDefault();
 	}
 
 	
@@ -53,9 +69,7 @@ $(function(){
 		    pagination : '.swiper-pagination',
 			paginationClickable :true,
 		    
-		    // 如果需要前进后退按钮
-		    nextButton: '.swiper-button-next',
-		    prevButton: '.swiper-button-prev',
+		  
 		  
 		  });  
 		
@@ -70,10 +84,12 @@ $(function(){
 		$(".nav ul .nav_h").hover(
 			function(){
 				$(".subnav").css("display","block");
+				$(".nav").css("padding-bottom","0px")
 				$(".nav_bar").addClass("nav_bar_h");
 			},
 			function(){
 				$(".subnav").css("display","none");
+				$(".nav").css("padding-bottom","20px")
 				$(".nav_bar").removeClass("nav_bar_h");
 			}
 		);

@@ -7,7 +7,7 @@
     left: 0px;
     top: 20%;
     z-index: 666;
-	
+	overflow: hidden;
 	
 }
 .custom{
@@ -114,14 +114,15 @@
 /*客服          END*/
 
 
+.header{
+	width: 100%;
+	position: absolute;
+	z-index: 77;
+}
+
 .header .header_top{
 	padding-top: 10px;
 	padding-bottom: 5px;
-	background: url(../img/header_bg.png) no-repeat left top;
-	-webkit-background-size: cover;  
-    -moz-background-size: cover;  
-    -o-background-size: cover; 
-	background-size: cover;
 }
 .header_top .collection{
 	line-height: 35px;
@@ -164,6 +165,9 @@
 	padding: 0;
 	list-style-type: none;
 }
+.nav_bar .nav{
+	padding-bottom: 20px;
+}
 .nav_bar .nav ul li a{
 	text-decoration: none;
 	color: #fff;
@@ -176,12 +180,13 @@
 	width: 100%;
 	margin-top: 5px;
 	overflow: hidden;
+	
 }
 .nav_bar .nav ul li{
 	width: 14%;
 	float: left;
 	text-align: center;
-	height: 55px;
+	
 }
 .nav_bar .nav ul .nav_last a{
 	border: none;
@@ -192,14 +197,10 @@
 
 
 .header .nav_bar .nav ul li .subnav{
-	position: absolute;
-	z-index: 666;
-	width: 14%;
 	display: none;
 }
 
 .header .nav_bar_h{
-	padding-bottom: 460px;
 	background: rgba(51,102,204,0.8);
 	position: absolute;
 	z-index: 66;
@@ -499,18 +500,18 @@
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-	.header .nav_bar_h{
-		padding-bottom: 335px;
-	}
 	.header .nav_bar .nav ul li .subnav li a{
 		line-height: 30px;
 		font-size: 10px;
 	}
-	
+	.header .iphone p{
+		font-size: 13px;
+	}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
 	.nav_bar .nav ul li a{
+		line-height: 25px;
 		font-size: 12px;
 	}
 	.header .nav_bar .logo img{
@@ -518,11 +519,8 @@
 		width: 100%;	
 	}
 	
-	.header .nav_bar_h{
-		padding-bottom: 235px;
-	}
 	.header .nav_bar .nav ul li .subnav li a{
-		line-height: 23px;
+		line-height: 28px;
 	}
 	
 }
