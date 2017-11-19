@@ -9,7 +9,6 @@
 	max-width: 100%;
 	width: 100%;
 	min-height: 200px;
-	height: 650px;
 }
 .swiper-pagination-bullet {
   width: 1.2rem !important;
@@ -35,6 +34,10 @@
 .content .title_bar{
 	border-bottom: 1px solid #7d7d7d;
 	overflow: hidden;
+}
+.content .title_bar .title h3 img{
+	max-width: 60%;
+	width: 100%;
 }
 
 /*more*/     
@@ -77,9 +80,47 @@
 /*一栏      END*/
 
 .product .text a img{
-	max-width: 100%;
+	max-width: 90%;
 	width: 100%;
 }
+
+/*无缝滚动*/
+.text_pic ul,.text_pic li{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.text_pic{
+	width: 100%;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+}
+
+.text_pic ul{
+	overflow: hidden;
+	position:absolute;
+	width: 1600px;
+	left: 0;
+	top: 0;
+	_height:1px;
+}
+
+.text_pic ul li{
+	float: left;
+	width: 180px;
+	text-align: center;
+}
+.text_pic ul li a{
+	color: #666;
+	text-decoration: none;
+}
+.text_pic ul li a:hover{
+	color: #4875D2;
+	text-decoration: underline;
+}
+/*无缝滚动         END*/
+
 /*二栏         END*/
 
 .information .text ul,.information .text li{
@@ -106,12 +147,7 @@
 }
 /*三栏      END*/
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-	.swiper-slide img{
-		width: 100%;
-		height: 500px;
-	}
-}
+
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
 	.content{
@@ -122,15 +158,5 @@
 		top: 0px;
 		right: 0;
 	}
-	.swiper-slide img{
-		width: 100%;
-		height: 450px !important;
-	}
-}
-@media only screen and (max-width:768px ) {
-	.swiper-slide img{
-		width: 100%;		
-		min-height: 250px;
-		height: 100%;
-	}
+
 }

@@ -148,7 +148,7 @@
 /*header_top     END*/
 
 .header .nav_bar{
-	background: #4875D2;
+	background: rgba(72,117,210,0.8);
 	padding-top: 10px;
 }
 .header .nav_bar .logo img{
@@ -253,18 +253,18 @@
 	}
 	.header_xs .edit{
 		overflow: hidden;
-		padding-bottom: 20px;
+		/*padding-bottom: 20px;*/
 		position: relative;
 		
 	}
 	.header_xs .iphone_xs{
 		border-right:1px solid #a6a5aa ;
-		padding: 20px 0 15px 20px;
+		padding: 30px 0 15px 20px;
 	}
 	.header_xs .edit span{
 		color: #fff;
 		float: left;
-		font-size: 30px;
+		font-size: 25px;
 		margin-right: 20px;
 	}
 	.header_xs .edit .iphone_xs p{
@@ -281,7 +281,7 @@
 		top: 0;
 		/*z-index: 0;*/
 		width: 75%;
-		height: 100px;
+		height: 75px;
 		font-size: 25px;
 		padding-left: 10px;
 		display: none;

@@ -16,13 +16,13 @@
     "gulp-plumber": "^1.1.0",
     "gulp-useref": "^3.1.2",
     "gulp-util": "^3.0.8",
+    "jquery": "^1.12.4",
+    "normalize.css": "^7.0.0",
+    "swiper": "^3.4.2",
     "vinyl-named": "^1.1.0",
     "webpack": "^3.8.1",
     "webpack-stream": "^4.0.0",
-    "jquery": "^3.2.1",
-    "normalize.css": "^7.0.0",
-    "yargs": "^9.0.1",
-    "swiper": "^3.4.2"
+    "yargs": "^9.0.1"
   },
   "dependencies": {
     "gulp-imagemin": "^3.4.0",
