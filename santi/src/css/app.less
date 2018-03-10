@@ -1,0 +1,231 @@
+@import "bootstrap.less";
+@import "mixin.less";
+@import "priuctList.less";
+@import "priuctDetail.less";
+@import "newList.less";
+@import "swiper.less";
+@import "var.less";
+@import "fun.less";
+@import "reset.less";
+@import "header.less";
+@import "server.less";
+@import "banner.less";
+@import "content.less";
+@import "footer.less";
+@import "tel.less";
+@import "hy.less";
+
+body {
+  background-color: #f9f9f9;
+  h1 {
+    text-align: center;
+  }
+}
+
+.content {
+  margin-top: 10px;
+}
+
+/*
+* 屏幕大于922px 显示的菜单
+*/
+.max-sub-nav {
+  .mian-title {
+    padding: 0;
+    margin: 0;
+    height: @TitleHeight;
+    line-height: @TitleHeight;
+    text-align: center;
+    color: @WhiteColor;
+    background-color: @MainHoverColor;
+    font-size: @TitleFontSize;
+  }
+
+  .list-nav {
+    list-style-type: none;
+    margin: 0 auto;
+    width: 95%;
+    box-shadow: 3px 3px 3px 1px #ccc;
+    font-size: @SecondLevelFontSize;
+    li {
+      padding-left: 20%;
+      line-height: @MenuPaddingLeft;
+      border-bottom: 1px solid @divisionLine;
+      .last-no-border;
+      a {
+        position: relative;
+        font-size: 15px;
+        &:after {
+          position: absolute;
+          left: -14px;
+          top: 40%;
+          width: 6px;
+          height: 6px;
+          border: 1px solid #666;
+          content: '';
+        }
+      }
+    }
+
+    .second-nav {
+      display: none;
+      .last-no-border;
+      > li {
+        line-height: @TitleHeight/2;
+        > a {
+          font-size: 14px;
+        }
+      }
+    }
+    .third-nav {
+      display: none;
+      .last-no-border;
+      > li {
+        line-height: @MenuPaddingLeft/2;
+        > a {
+          font-size: 13px;
+        }
+      }
+    }
+    .accordion-heading a {
+      position: relative;
+      padding-left: @MenuPaddingLeft;
+      display: inline-block;
+      height: 36px;
+      line-height: 36px;
+      color: @BlockColor;
+      &:after {
+        position: absolute;
+        left: @MenuPaddingLeft - 10;
+        top: 50% - 6;
+        width: 6px;
+        height: 6px;
+        content: '';
+        border: 1px solid #5d657a;
+      }
+      &:hover {
+        color: @MainHoverColor;
+        &:after {
+          background-color: #5d657a;
+        }
+      }
+      &.active {
+        color: @MainHoverColor;
+        &:after {
+          background-color: #5d657a;
+        }
+      }
+    }
+    .accordion-body {
+      margin-left: 40px;
+      list-style-type: none;
+      font-size: @MinFontSize;
+      .accordion-inner a {
+        padding-left: @MenuPaddingLeft/2;
+        height: 30px;
+        line-height: 30px;
+        &:after {
+          position: absolute;
+          left: @MenuPaddingLeft/2 - 10;
+          top: 50% - 6;
+          width: 6px;
+          height: 6px;
+          content: '';
+          border: 1px solid #5d657a;
+        }
+        &:hover {
+          color: @MainHoverColor;
+          &:after {
+            background-color: #5d657a;
+          }
+        }
+        &.active {
+          color: @MainHoverColor;
+          &:after {
+            background-color: #5d657a;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*
+* 屏幕小于922px 显示的菜单
+*/
+.min-sub-nav {
+  width: 100%;
+  min-height: 1px;
+  .clear;
+  .main-title {
+    margin: 0;
+    padding: @TitleHeight/2 6px;
+    font-size: @TitleFontSize;
+    text-align: center;
+    word-wrap: break-word;
+    color: #fff;
+    background-color: @MainHoverColor;
+  }
+  .subnav {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    .subnav-item {
+      margin: 6px 0;
+      display: inline-block;
+      &.active {
+        .btn {
+          color: #fff;
+          background-color: #337ab7;
+        }
+      }
+    }
+  }
+}
+
+/*
+* 屏幕宽度<992 子菜单显示在上面
+*/
+@media (max-width: 992px) {
+  .max-sub-nav {
+    display: none;
+  }
+
+  .min-sub-nav {
+    display: block;
+  }
+
+  .breadcrumb {
+    padding: 8px 0;
+    li {
+      font-size: @ThreeLevelFontSize;
+    }
+  }
+
+  .product .product-wrapper thead tr {
+    .mobile-none {
+      display: none;
+    }
+  }
+
+  .product .product-wrapper tbody tr {
+    border-bottom: 1px solid @divisionLine;
+    .mobile-none {
+      display: none;
+    }
+  }
+}
+
+/*
+* 屏幕宽度>992 子菜单显示在左边
+*/
+@media (min-width: 992px) {
+  .max-sub-nav {
+    display: block;
+  }
+
+  .min-sub-nav {
+    display: none;
+  }
+}

@@ -1,0 +1,104 @@
+.left_bottom {
+  width: 100%;
+  .icon {
+    margin: 16px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .title {
+    padding: 0;
+    margin: 0;
+    height: @TitleHeight;
+    line-height: @TitleHeight;
+    text-align: center;
+    color: @WhiteColor;
+    background-color: @MainHoverColor;
+    font-size: @TitleFontSize;
+  }
+  .information {
+    padding: 16px;
+    width: 95%;
+    box-shadow: 3px 3px 3px 1px #ccc;
+    .address, .number {
+      text-indent: 2em;
+    }
+  }
+}
+
+.breadcrumb {
+  li {
+    font-size: @SecondLevelFontSize;
+  }
+  a:hover {
+    color: @MainHoverColor;
+  }
+  li + li:before {
+    content: '>'; //面包屑导航的中间间隔样式
+  }
+}
+
+.product {
+  width: 100%;
+  .product-wrapper {
+    width: 100%;
+    tbody {
+      tr {
+        height: 130px;
+      }
+    }
+    .item-desc {
+      padding: 0 20px;
+      .clear;
+      .more {
+        display: inline-block;
+        float: right;
+        color: #ff0103;
+        &:hover {
+          color: @MainHoverColor;
+        }
+      }
+    }
+  }
+}
+
+.navigation {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  .pagination {
+    margin: 0 auto;
+    .page-item {
+      a {
+        color: #666;
+      }
+      &:hover, &.active {
+        a {
+          border: 1px solid #FD8402;
+          background-color: #FD8402;
+        }
+      }
+      &.active {
+        background: none;
+      }
+      &:hover, &:focus {
+        a {
+          color: #666;
+        }
+      }
+    }
+  }
+}
+
+
+.product{
+  img{
+    width: 160px;
+    display: block;
+    border-radius: 6px;
+  }
+}

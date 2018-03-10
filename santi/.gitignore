@@ -1,0 +1,8 @@
+node_modules/
+// Npm.
+
+dist/
+// gulp build
+
+.git
+// git.

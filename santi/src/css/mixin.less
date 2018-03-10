@@ -1,0 +1,77 @@
+//公共样式
+
+/*颜色*/
+@MainHoverColor: #17923B;
+@WhiteColor: #FFF;
+@BlockColor: #000;
+@divisionLine: rgba(0, 0, 0, .3);
+
+/*宽高*/
+@TitleHeight: 60px;
+@MenuPaddingLeft: 50px;
+
+/*字体大小*/
+@TitleFontSize: 18px;
+@SecondLevelFontSize: 16px;
+@ThreeLevelFontSize: 14px;
+@MinFontSize: 12px;
+
+/*常见样式*/
+/*下边框为1像素*/
+.border-1px(@color) {
+  position: relative;
+  &:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: '';
+    width: 100%;
+    border-top: 1px solid @color;
+  }
+}
+
+/*最后一个不显示边框*/
+.last-no-border {
+  &:last-child {
+    border: none;
+  }
+}
+
+/*文字超出显示省略号*/
+.no-wrap {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*清除浮动*/
+.clear:after {
+  content: '';
+  display: block;
+  clear: both;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.clear {
+  zoom: 1;
+}
+
+/*兼容动画*/
+.trans(@type, @time) {
+  -webkit-transition: @type @time;
+  -moz-transition: @type @time;
+  -ms-transition: @type @time;
+  -o-transition: @type @time;
+  transition: @type @time;
+}
+
+/*圆角*/
+.border-raduis(@width) {
+  -webkit-border-radius: @width;
+  -moz-border-radius: @width;
+  border-radius: @width;
+}

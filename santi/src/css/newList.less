@@ -1,0 +1,29 @@
+.news-wrapper {
+  .news-list {
+    list-style-type: none;
+    .item {
+      display: flex;
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      vertical-align: middle;
+      color: @MinFontSize;
+      font-size: @MinFontSize;
+      .clear;
+    }
+    .item-title {
+      flex: 1;
+      color: #676767;
+      font-size: @ThreeLevelFontSize;
+      .no-wrap;
+      &:hover {
+        color: @MainHoverColor;
+      }
+    }
+    time {
+      flex: 0 0 100px;
+      text-align: right;
+      color: #b3afbe;
+    }
+  }
+}
